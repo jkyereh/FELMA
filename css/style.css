@@ -247,6 +247,14 @@ a { color: var(--berry-deep); }
   .split { grid-template-columns: 1fr 1fr; gap: 4rem; }
 }
 
+/* Photo that stretches to match the height of the text beside it */
+.photo-fill { position: relative; aspect-ratio: 4 / 5; }
+.photo-fill img { position: absolute; inset: 0; object-position: 50% 20%; }
+@media (min-width: 860px) {
+  .split-fill { align-items: stretch; }
+  .photo-fill { aspect-ratio: auto; min-height: 420px; }
+}
+
 /* ---------- Featured showcase ---------- */
 .showcase { display: grid; gap: 1rem; }
 .shot {
